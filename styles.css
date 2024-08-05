@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: blueviolet;
+    font-weight: 900;
+}
+
+section {
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4caf50;
+    color: white;
+}
+
+.tips-container,
+.products-container,
+.diy-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #f10707;
+    }
+
+    25% {
+        border-color: #f1c107;
+    }
+
+    50% {
+        border-color: #07f13d;
+    }
+
+    75% {
+        border-color: #073df1;
+    }
+
+    100% {
+        border-color: #f10707;
+    }
+}
+
+.card {
+    background-color: white;
+    border: 5px solid #f10707;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+    animation: borderAnimation 4s linear infinite;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card p.full-description {
+    display: none;
+}
+
+.learn-more {
+    color: blue;
+    cursor: pointer;
+}
+
+
+.card h3 {
+    color: blueviolet;
+}
+
+.card p {
+    line-height: 30px;
+    font-weight: 400;
+    /* font-weight should be a numeric value or keyword like bold */
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
